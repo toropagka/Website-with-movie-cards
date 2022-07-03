@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./style.css" />
+	<title>Фаворит</title>
+</head>
+
+<body>
+	<div class="bg-overlay"></div>
+	<div class="container">
+		<header class="header">
+			<img class="logo" src="./images/logo-top.svg" alt="logo" />
+			<div class="search-line">
+				<input type="text" class="search-line__search" id="searchInput" placeholder="Поиск..." />
+				<button type="button" class="search-line__button open-pop-up">Добавить</button>
+				<button type="button" class="search-line__button open-pop-up what-to-watch">Что посмотреть?</button>
+			</div>
+		</header>
+
+		<!-- Block with movie cards -->
+
+		<main class="main">
+			<ul class="movies">
+			</ul>
+		</main>
+		<footer class="footer">
+			<img class="logo-bottom" src="./images/logo-bottom.svg" alt="Фаворит" />
+			<p class="copy"></p>
+
+			<button class="arrow-up">
+				<a class="arrow-link" href="#" onclick="return arrowUp()">
+					<svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 15L12 8L19 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg></a>
+			</button>
+		</footer>
+	</div>
+	</svg>
+
+	<!-- Block pop-up with card crreation -->
+
+	<div class="pop-up">
+		<div class="pop-up__container">
+			<div class="pop-up__body">
+				<p class="pop-up__header">Создание закладки</p>
+				<form action="" class="pop-up__form" enctype="multipart/form-data" method="post" name="formCreate"
+					id="formCreate">
+					<p class="form__sign">Название</p>
+					<input type="text" placeholder="Type something here..." class="pop-up__input" name="name">
+					<p class="form__sign">Год выпуска</p>
+					<input type="text" placeholder="Type something here..." class="pop-up__input" name="year">
+					<div class="form__poster_wrapper">
+						<p class="form__sign">Постер</p>
+						<input type="file" placeholder="File not selected..." accept="image/*"
+							class="pop-up__input pop-up__input_poster" name="poster" id="imageInput"></label>
+					</div>
+					<p class="form__sign">Жанры</p>
+					<input type="text" placeholder="Type something here..." class="pop-up__input" name="genres">
+					<p class="form__sign">Описание</p>
+					<textarea type="text" placeholder="Type something here..." class="pop-up__input"
+						name="description"></textarea>
+					<div class="pop-up__buttons">
+						<button class="pop-up__button-select close-pop-up" type="button">Отменить</button>
+						<button class="pop-up__button-select save-pop-up" type="submit">Сохранить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Edit bookmark -->
+
+
+
+	<!-- Hidden cards with preview and description. Open on click. -->
+
+	<div class="overlay-container"></div>
+	<script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
